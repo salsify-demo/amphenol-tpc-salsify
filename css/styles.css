@@ -177,13 +177,14 @@ h1 .grad { background: linear-gradient(90deg, #fff, var(--blue), #fff); backgrou
 .state ul { padding-left: 18px; color: var(--muted); font-size: 15px; margin-top: 12px; }
 .state li { margin: 8px 0; }
 .state li b { color: var(--text); }
-.attr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.6fr); gap: 12px; margin-top: 24px; }
-.attr div { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 16px 10px; text-align: center; }
-.attr b { display: block; font-size: clamp(24px, 3.4vw, 28px); color: var(--blue); letter-spacing: -.02em; line-height: 1.05; white-space: nowrap; }
+.attr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+.attr div { container-type: inline-size; background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 16px 10px; text-align: center; }
+.attr b { display: block; font-size: 22px; font-size: clamp(16px, 15cqw, 28px); color: var(--blue); letter-spacing: -.02em; line-height: 1.05; white-space: nowrap; }
 .attr span { display: block; font-size: 13px; color: var(--muted); margin-top: 6px; }
 @media (max-width: 520px) {
   .attr { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .attr div:last-child { grid-column: 1 / -1; }
+  .attr b { font-size: clamp(22px, 9cqw, 30px); }
 }
 .errs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .errs span { font-size: 13px; border: 1px solid rgba(214, 40, 40, .55); color: #FF8FA3; border-radius: 999px; padding: 6px 12px; }
